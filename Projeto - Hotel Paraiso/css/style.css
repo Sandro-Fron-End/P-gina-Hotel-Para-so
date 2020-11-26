@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* Reset */
+*, *::before, *::after {box-sizing: border-box;}
+body {padding: 0; margin: 0; font-family: 'Open Sans', Arial, Helvetica, sans-serif;}
+a {text-decoration: none; opacity: .9;}
+a:hover {opacity: 1;}
+ul {list-style-type: none;}
+
+/* Header */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px 15px 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo {width: 325px; height: 80px;}
+.menu ul {display: flex;}
+.menu ul li + li {margin-left: 25px;}
+.menu ul li a {color: black; font-size: 1.1em;}
+.menu ul li a:hover {border-bottom: 2px solid black; transition: all 2s;} 
+
+/* Banner Hero Full */
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.hero-banner h1 {font-size: 3em; color: #fff;}
+.hero-banner h2 {font-size: 1.6em; color: #fff;}
+.hero-banner .btn-saiba {
+    width: 18%;
+    padding: 25px;
+    margin-top: 15px;
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: .9;
+    cursor: pointer;
+}
+.hero-banner .btn-saiba:hover {box-shadow: 0 10px 25px #000;}
+
+/* Pequenas Linhas Divisórias entre as Página */
+.line {width: 250px; height: 1px; background-color: black;}
+
+/* Galeria de Imagens sobre o Hotel */
+.galeria-img .destaque {width: 51%; margin: 80px auto; text-align: center;}
+
+/* Pequeno Ajuste na Linha - Galeria */
+.destaque p {padding-bottom: 20px; font-size: 1.2em;}
+
+/* Grid Galeria de Imagens */
+.gallery img {
+    width: 30%;
+    margin: 12px;
+    border: 5px solid #b8d830;
+    border-radius: 8px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+.gallery .img-1 {flex: 1 0 45%;}
+.gallery .img-2 {flex: 1 0 45%;}
+.gallery .img-3 {flex: 1 0 45%;}
+.gallery .img-4 {flex: 1 0 35%;}
+
+/* Características do Hotel */
+.caracteristicas {
+    width: 100%;
+    padding: 5%;
+    margin: 45px 0 0 0;
+    background-color: #1d2409;
+    text-align: center;
+}
+.caracteristicas i {font-size: 2.5em; color: #b8d830;}
+.caracteristicas h1 {font-size: 2em; color: #fff;}
+.caracteristicas p:nth-child(2) {
+    width: 60%;
+    margin: 35px auto;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.3;
+}
+.caracteristicas .line {display: block; background-color: #fff; margin-bottom: 50px;}
+.caracteristicas h3 {font-size: 1.3em; color: #b8d830;}
+.detalhes {display: flex;}
+.detalhes li + li {margin-left: 25px;}
+.detalhes p {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* Newsletter */
+.newsletter {
+    width: 100%;
+    padding: 5%;
+    background-color: #f4f0ee;  
+    text-align: center; 
+}
+.newsletter h1 {font-size: 2em; color: #b8d830;}
+.newsletter p {
+    width: 40%;
+    margin: 35px auto;
+    font-size: 1.2em; 
+    color: #b8d830; 
+    line-height: 1.3;
+}
+.newsletter .line {height: 1px; background-color: #b8d830;}
+.newsletter form {width: 100%;}
+.newsletter input {
+    width: 50%;
+    padding: 15px;
+    margin-top: 40px;
+    border: 1px solid #b8d830;
+    border-radius: 5px;
+    outline: none;
+}
+.newsletter button {
+    width: 13%;
+    padding: 15px;
+    background-color: #b8d830;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: 1px solid #b8d830;
+}
+
+/* Rodapé Hotel */
+.rodape {
+    width: 100%;
+    padding: 10px;
+    background-color: #1d2409;
+    text-align: center;
+}
+.rodape ul {display: flex; justify-content: center; align-items: center;}
+.rodape ul li + li {margin-left: 9px;}
+.rodape ul li i {font-size: 2em; color: #b8d830;}
+.rodape ul li i:hover {color: #daec8a; cursor: pointer;}
+.rodape p {font-size: 1.2em; color: #b8d830;}
+
+/* Media Queries Mobile */
+@media screen and (max-width: 20em) /* 320px */ {
+    /* Header */
+    .cabecalho {width: 100%;}
+    .cabecalho .logo {width: 280px;}
+    .menu ul {padding: 0; flex-wrap: wrap; justify-content: center;}
+    .menu li {margin-bottom: 15px;}
+    .menu li:last-child {margin-right: 20px;}
+    .menu ul li a {font-size: 1.3em;}
+    
+    /* Banner Hero Full */
+    .hero-banner h1 {font-size: 2.5em; text-align: center;}
+    .hero-banner h2 {font-size: 1.5em; text-align: center;}
+    .hero-banner .btn-saiba {width: 50%; padding: 15px;}
+
+    /* Galeria de Imagens sobre o Hotel */
+    .galeria-img .destaque {width: 100%;}
+    .destaque p {width: 90%; margin: auto;}
+
+    /* Linhas no Centro Tamanho Padrão*/
+    .line {width: 150px;}
+
+    /* Características do Hotel */
+    .caracteristicas {width: 100%;}
+    .caracteristicas p:nth-child(2) {width: 95%;}
+    .detalhes {width: 100%; padding: 0; flex-direction: column;}
+    .detalhes li + li {margin-left: 0;}
+    .detalhes ul {flex-direction: column;}
+
+    /* Grid Galeria de Imagens */
+    .gallery img {width: 100%; margin: 15px auto;}
+
+    /* Newsletter */
+    .newsletter {width: 100%;}
+    .newsletter p {width: auto;}
+    .newsletter form {display: flex; flex-direction: column; align-items: center; }
+    .newsletter input {width: 60%; margin-bottom: 10px; text-align: center;}
+    .newsletter button {width: 60%;}
+
+    /* Rodapé Hotel */
+    .rodape ul {padding: 0;}
+}
+
+@media screen and (max-width: 28.125em) /* 460px */ {
+    /* Header */
+    .cabecalho {width: 100%; justify-content: center;}
+    .cabecalho .logo {width: 280px;}
+    .menu ul {flex-wrap: wrap; justify-content: center; padding: 0;}
+    .menu li {margin-bottom: 15px;}
+    .menu li:last-child {margin-right: 20px;}
+    .menu ul li a {font-size: 1.3em;}
+    
+    /* Banner Hero Full */
+    .hero-banner h1 {text-align: center; font-size: 2.5em;}
+    .hero-banner h2 {text-align: center; font-size: 1.5em;}
+    .hero-banner .btn-saiba {width: 50%; padding: 15px;}
+
+    /* Galeria de Imagens sobre o Hotel */
+    .galeria-img .destaque {width: 100%;}
+    .destaque p {width: 90%; margin: auto;}
+
+    /* Linhas no Centro Tamanho Padrão*/
+    .line {width: 150px;}
+
+    /* Características do Hotel */
+    .caracteristicas {width: 100%;}
+    .caracteristicas p:nth-child(2) {width: 95%;}
+    .detalhes {flex-direction: column; width: 100%; padding: 0;}
+    .detalhes li + li {margin-left: 0;}
+    .detalhes ul {flex-direction: column;}
+
+    /* Grid Galeria de Imagens */
+    .gallery img {width: 100%; margin: 15px auto;}
+
+    /* Newsletter */
+    .newsletter {width: 100%;}
+    .newsletter p {width: auto;}
+    .newsletter form {display: flex; flex-direction: column; align-items: center; }
+    .newsletter input {width: 60%; margin-bottom: 10px; text-align: center;}
+    .newsletter button {width: 60%;}
+
+    /* Rodapé Hotel */
+    .rodape ul {padding: 0;}
+}
+
+@media screen and (max-width: 37.5em) /* 600px */ {
+    /* Header */
+    .cabecalho {width: 100%; justify-content: center;}
+    .cabecalho .logo {width: 380px;}
+    .menu ul {padding: 0; flex-wrap: wrap; justify-content: center;}
+    .menu li {margin-bottom: 15px;}
+    .menu li:last-child {margin-right: 20px;}
+    .menu ul li a {font-size: 1.3em;}
+    
+    /* Banner Hero Full */
+    .hero-banner h1 {font-size: 1.9em; text-align: center;}
+    .hero-banner h2 {font-size: 1.3em; text-align: center;}
+    .hero-banner .btn-saiba {width: 35%; padding: 15px;}
+
+    /* Galeria de Imagens sobre o Hotel */
+    .galeria-img .destaque {width: 100%;}
+    .destaque p {width: 90%; margin: auto;}
+
+    /* Linhas no Centro Tamanho Padrão*/
+    .line {width: 150px;}
+
+    /* Características do Hotel */
+    .caracteristicas {width: 100%;}
+    .caracteristicas p:nth-child(2) {width: 95%;}
+    .detalhes {flex-direction: column; width: 100%; padding: 0;}
+    .detalhes li + li {margin-left: 0;}
+    .detalhes ul {flex-direction: column;}
+
+    /* Grid Galeria de Imagens */
+    .gallery img {width: 100%; margin: 15px auto;}
+
+    /* Newsletter */
+    .newsletter {width: 100%;}
+    .newsletter p {width: auto;}
+    .newsletter form {display: flex; flex-direction: column; align-items: center;}
+    .newsletter input {width: 60%; margin-bottom: 10px; text-align: center;}
+    .newsletter button {width: 60%;}
+
+    /* Rodapé Hotel */
+    .rodape ul {padding: 0;}
+}
+
+@media screen and (max-width: 56.25em) /* 900px */ {
+    /* Header */
+    .cabecalho {width: 100%; justify-content: center;}
+    .cabecalho .logo {width: 280px;}
+    .menu ul {flex-wrap: wrap; justify-content: center; padding: 0; align-items: center;}
+    .menu li {margin-bottom: 15px;}
+    .menu li:last-child {margin-right: 20px;}
+    .menu ul li a {font-size: 1.3em;}
+    
+    /* Banner Hero Full */
+    .hero-banner h1 {text-align: center; font-size: 1.9em;}
+    .hero-banner h2 {text-align: center; font-size: 1.3em;}
+    .hero-banner .btn-saiba {width: 35%; padding: 15px;}
+    
+    /* Galeria de Imagens sobre o Hotel */
+    .galeria-img .destaque {width: 100%;}
+    .destaque p {width: 90%; margin: auto;}
+    
+    /* Linhas no Centro Tamanho Padrão*/
+    .line {width: 150px;}
+    
+    /* Características do Hotel */
+    .caracteristicas {width: 100%;}
+    .caracteristicas p:nth-child(2) {width: 95%;}
+    .detalhes {flex-direction: column; width: 100%; padding: 0;}
+    .detalhes li + li {margin-left: 0;}
+    .detalhes ul {flex-direction: column;}
+    
+    /* Grid Galeria de Imagens */
+    .gallery img {width: 100%; margin: 15px auto;}
+    
+    /* Newsletter */
+    .newsletter {width: 100%;}
+    .newsletter p {width: auto;}
+    .newsletter form {display: flex; flex-direction: column; align-items: center; }
+    .newsletter input {width: 60%; margin-bottom: 10px; text-align: center;}
+    .newsletter button {width: 60%;}
+    
+    /* Rodapé Hotel */
+    .rodape ul {padding: 0;}
+}
